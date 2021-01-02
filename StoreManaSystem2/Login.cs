@@ -24,43 +24,50 @@ namespace StoreManaSystem2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = textBox1.Text.Trim();
-            string userpwd = textBox2.Text.Trim();
-            string sql = "select * from admin where username='" + username + "' and pwd='" + userpwd + "'";
-            conn = dh.Connection;
-            dh.OpenConnection();
-            cmd = new MySqlCommand(sql, conn);
-            MySqlDataReader sread = cmd.ExecuteReader();//查询语句
-            try
+            if (textBox1.Text == "" || textBox2.Text == "")
             {
-                if (sread.Read())
+                MessageBox.Show("密码或账号不能为空", "提示");
+            }else
+            {
+                string username = textBox1.Text.Trim();
+                string userpwd = textBox2.Text.Trim();
+                string sql = "select * from admin where username='" + username + "' and pwd='" + userpwd + "'";
+                conn = dh.Connection;
+                dh.OpenConnection();
+                cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader sread = cmd.ExecuteReader();//查询语句
+                try
                 {
-                    MessageBox.Show("登录成功", "登录");
-                    using (MainWin mw = new MainWin())
+                    if (sread.Read())
                     {
-                        this.Hide();
-                        mw.ShowDialog();
-                        this.Dispose();
-                        this.Close();
+                        MessageBox.Show("登录成功", "登录");
+                        using (MainWin mw = new MainWin())
+                        {
+                            this.Hide();
+                            mw.ShowDialog();
+                            this.Dispose();
+                            this.Close();
+
+                        }
 
                     }
-
+                    else
+                    {
+                        MessageBox.Show("用户名或密码错误");
+                    }
                 }
-                else
+                catch (Exception e1)
                 {
-                    MessageBox.Show("用户名或密码错误");
+                    MessageBox.Show(e1.ToString());
+                }
+                finally
+                {
+                    conn.Close();                    //关闭连接
+                    conn.Dispose();                  //释放连接
+
                 }
             }
-            catch (Exception e1)
-            {
-                MessageBox.Show(e1.ToString());
-            }
-            finally
-            {
-                conn.Close();                    //关闭连接
-                conn.Dispose();                  //释放连接
-
-            }
+            
         }
     }
     

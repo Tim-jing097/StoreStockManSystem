@@ -153,6 +153,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "AddAdimi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddAdimi";
             this.ResumeLayout(false);
             this.PerformLayout();

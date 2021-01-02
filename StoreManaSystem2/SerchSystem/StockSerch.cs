@@ -14,13 +14,14 @@ namespace StoreManaSystem2.SerchSystem
 {
     public partial class StockSerch : Form
     {
+        private int index;
         public StockSerch()
         {
             InitializeComponent();
         }
         Dbutil dh = new Dbutil();
         MySqlConnection conn = null;
-        MySqlCommand cmd = null;
+        //MySqlCommand cmd = null;
         DataSet ds = null;
         //MySqlDataAdapter da = null;
         DataTable dt = null;
@@ -41,6 +42,30 @@ namespace StoreManaSystem2.SerchSystem
         {      
             this.Close();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        class GlobalData {
+            public static string ids;
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            index = dataGridView1.CurrentRow.Index;
+            GlobalData.ids = dataGridView1.Rows[index].Cells[0].Value.ToString();
+            using (ModifyNum mdn =new ModifyNum(GlobalData.ids))
+            {
+                //this.Hide();
+                mdn.ShowDialog();
+                //this.Dispose();
+                //this.Close();
+
+            }
         }
     }
 }

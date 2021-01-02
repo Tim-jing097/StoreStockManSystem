@@ -34,12 +34,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,26 +109,6 @@
             this.dataGridView1.TabIndex = 30;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(133, 82);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 32);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "刷新列表";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(332, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 38);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "用户信息管理";
-            // 
             // name
             // 
             this.name.DataPropertyName = "name";
@@ -157,6 +137,26 @@
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(133, 82);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(97, 32);
+            this.button3.TabIndex = 31;
+            this.button3.Text = "刷新列表";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(332, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(245, 38);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "用户信息管理";
+            // 
             // AdminMana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -171,6 +171,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button2);
             this.Name = "AdminMana";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMana";
             this.Load += new System.EventHandler(this.AdminMana_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -152,7 +152,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(139, 64);
             this.button3.TabIndex = 6;
-            this.button3.Text = "显示数据(S)";
+            this.button3.Text = "显示刷新数据(S)";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -191,6 +191,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Name = "thingsInfoSerch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "thingsInfoSerch";
             this.Load += new System.EventHandler(this.thingsInfoSerch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

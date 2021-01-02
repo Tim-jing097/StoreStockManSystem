@@ -24,7 +24,7 @@ namespace StoreManaSystem2.SystemMana
 
         Dbutil dh = new Dbutil();
         MySqlConnection conn = null;
-        MySqlCommand cmd = null;
+       // MySqlCommand cmd = null;
         DataSet ds = null;
         //MySqlDataAdapter da = null;
         DataTable dt = null;

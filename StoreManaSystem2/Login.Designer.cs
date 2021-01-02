@@ -43,6 +43,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(178, 25);
             this.textBox2.TabIndex = 11;
+            this.textBox2.UseSystemPasswordChar = true;
             // 
             // textBox1
             // 
@@ -71,9 +72,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(299, 218);
+            this.button2.Location = new System.Drawing.Point(295, 218);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(87, 43);
             this.button2.TabIndex = 7;
             this.button2.Text = "退出";
             this.button2.UseVisualStyleBackColor = true;
@@ -82,7 +83,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(161, 218);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(86, 43);
             this.button1.TabIndex = 6;
             this.button1.Text = "登录";
             this.button1.UseVisualStyleBackColor = true;
@@ -111,6 +112,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "登陆界面";
             this.ResumeLayout(false);
             this.PerformLayout();

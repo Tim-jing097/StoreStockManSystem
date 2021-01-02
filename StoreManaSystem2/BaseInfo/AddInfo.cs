@@ -15,7 +15,7 @@ namespace StoreManaSystem2.BaseInfo
 {
     public partial class AddInfo : Form
     {
-        private int x;
+        //private int x;
         public AddInfo()
         {
            

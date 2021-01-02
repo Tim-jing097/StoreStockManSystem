@@ -180,6 +180,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "AddInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddInfo";
             this.Load += new System.EventHandler(this.AddInfo_Load);
             this.ResumeLayout(false);

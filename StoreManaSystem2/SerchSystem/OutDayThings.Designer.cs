@@ -121,6 +121,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "OutDayThings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OutDayThings";
             this.Load += new System.EventHandler(this.OutDayThings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

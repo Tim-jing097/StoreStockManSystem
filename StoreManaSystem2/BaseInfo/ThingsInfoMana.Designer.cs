@@ -159,6 +159,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "ThingsInfoMana";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThingsInfoMana";
             this.Load += new System.EventHandler(this.ThingsInfoMana_Load);
             this.ResumeLayout(false);
